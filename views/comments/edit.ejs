@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+
+<div class="row">
+  <div class="col-lg-12">
+
+    <h1 class="text-center">Update Comment for Campground</h1>
+
+    <div class="mx-auto">
+        <form action="/campgrounds/<%= campgroundId %>/comments/<%= comment._id %>?_method=PUT" method="post">
+            <div class="form-group">
+              <label for="desc">Update Content</label>
+              <textarea rows="8" class="form-control" cols="100" id="desc" name="comment[text]" aria-describedby="descHelp"><%= comment.text %></textarea>
+              <small id="descHelp" class="form-text text-muted">Update comment content.</small>
+            </div>
+
+            <div class="text-center">
+              <input type="submit" class="btn btn-primary btn-block" value="Submit">
+              <input type="reset" class="btn btn-primary btn-block" value="Reset">
+            </div>
+        </form>
+        <a href="/campgrounds" class="text-center">Go Back</a>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>
