@@ -1,6 +1,7 @@
 const REDIRECTION = {
-  successRedirect: "/questions",
-  failureRedirect: "/login"
+  successRedirect: "/campgrounds",
+  failureRedirect: "/login",
+  failureFlash: true
 };
 
 var User            = require("../models/user"),
@@ -36,7 +37,7 @@ router.post("/register", function(req, res){
   var user = new User({username: req.body.username});
   User.register(user, req.body.password, function(err, user){
     if(err){
-      req.flash("error", err.message);
+       req.flash("error", err.message);
        return res.redirect("back");
     }
 
