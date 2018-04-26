@@ -63,7 +63,7 @@ function initPassport(){
 
 function initDB(){
   // Connect to DB
-  mongoose.connect(process.env.DB_YELP || "mongodb://localhost/campgrounds3");
+  mongoose.connect(process.env.DB_CAMPGROUNDS || "mongodb://localhost/campgrounds3");
 }
 
 function getCurrentUser(req, res, next){
