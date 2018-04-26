@@ -26,7 +26,7 @@ router.get("/search", function(req, res){
   res.render("campgrounds/search");
 });
 
-router.get("/results", function(req, res){
+router.get("/results", Middleware.isLoggedIn, function(req, res){
   var name = req.query.name;
   // console.log("Name of campground to find: " + name);
   var campground = CampgroundFxns.findCampground(name);
@@ -48,7 +48,7 @@ router.post("/remove", Middleware.isCampgroundOwner, function(req, res){
   res.redirect("/campgrounds");
 });
 
-router.get("/:id", function(req, res){
+router.get("/:id", Middleware.isLoggedIn, function(req, res){
   console.log(req.params);
   CampgroundFxns.findCampgroundByID(req.params.id, req, res);
 });

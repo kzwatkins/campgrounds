@@ -44,7 +44,7 @@ function init(){
 }
 
 function initSettings(){
-  app.use(express.static("public"));
+  app.use("/static", express.static(__dirname + "/public"));
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(expressSession(EXPRESS_SESSION_CREDS));
   app.use(methodOverride("_method"));

@@ -14,7 +14,7 @@
     <% if(campgrounds){ %>
     <% campgrounds.forEach(function(campground){ %>
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <img src='/images/<%= campground.url %>' class="img-thumbnail">
+        <img src='/static/images/<%= campground.url %>' class="img-thumbnail">
         <div class="caption"><h4><%= campground.name %></h4></div>
         <form class="" action="/campgrounds/<%= campground._id %>" method="get">
           <input type="submit" class="btn btn-primary" value="More Info">
