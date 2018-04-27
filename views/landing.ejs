@@ -10,6 +10,19 @@
 
   <body class="text-center">
       <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <div class="container">
+            <% if(error && error.length > 0){ %>
+                <div class="alert alert-danger fadeOut" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
+            <% if(success && success.length > 0){ %>
+                <div class="alert alert-success fadeOut" role="alert">
+                    <%= success %>
+                </div>
+            <% } %>
+        </div>
+
         <main role="main" class="inner cover">
           <h1 class="cover-heading animated bounceInUp" id="landing-header">Yelp Campgrounds!</h1>
           <p class="lead">This is my fullstack demo advertising campgrounds!</p>
@@ -32,18 +45,6 @@
           </div>
           </div>
         </footer>
-        <div class="container">
-            <% if(error && error.length > 0){ %>
-                <div class="alert alert-danger fadeOut" role="alert">
-                    <%= error %>
-                </div>
-            <% } %>
-            <% if(success && success.length > 0){ %>
-                <div class="alert alert-success fadeOut" role="alert">
-                    <%= success %>
-                </div>
-            <% } %>
-        </div>
       </div>
 
 
