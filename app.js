@@ -1,5 +1,5 @@
 const EXPRESS_SESSION_CREDS = {
-  secret: "Are there any secrets left?",
+  secret: process.env.SESSION_CREDS,
   resave: false,
   saveUninitialized: false
 };
