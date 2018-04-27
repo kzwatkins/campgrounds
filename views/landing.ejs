@@ -1,38 +1,56 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Tacit Survey</title>
-        <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/landing.css">
-    </head>
-    <body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Yelp Camps!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/header-style.css">
+  </head>
 
-    <div class="container">
-        <% if(error && error.length > 0){ %>
-            <div class="alert alert-danger" role="alert">
-                <%= error %>
+  <body class="text-center">
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <main role="main" class="inner cover">
+          <h1 class="cover-heading animated bounceInUp" id="landing-header">Yelp Campgrounds!</h1>
+          <p class="lead">This is my fullstack demo advertising campgrounds!</p>
+          <p class="">This demo includes front end: HTML5, CSS3, Bootstrap, jQuery, and back end: MongoDB, Express, along with some related frameworks.</p>
+          <p class="lead">
+            <a href="/campgrounds" class="" ><button type="button" id="hdr-btn" class="btn btn-lg btn-success animated fadeIn">Get Started</button></a>
+          </p>
+        </main>
+
+        <footer class="mastfoot mt-auto">
+          <div class="inner">
+
+          <div class="row">
+            <div class="col-md-9">
+              <p><div class="small"><em> Designed by <a href="http://kzwatkins.github.io">K. Z. Watkins</a> &copy; 2018</em></div></p>
             </div>
-        <% } %>
-        <% if(success && success.length > 0){ %>
-            <div class="alert alert-success" role="alert">
-                <%= success %>
+            <div class="col-md-3">
+              <a href="http://freeaussiestock.com/free/Northern_Territory/slides/camp_fire.htm" target="_blank" rel="noopener noreferrer" title="Photo by William White" alt="a camp fire at sunset with passing cloud and rain shower"><button class="button btn-secondary btn-sm"><i class="fas fa-camera"></i> <span class="small">Camp Fire</span></button></a>
             </div>
-        <% } %>
-    </div>
+          </div>
+          </div>
+        </footer>
+        <div class="container">
+            <% if(error && error.length > 0){ %>
+                <div class="alert alert-danger fadeOut" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
+            <% if(success && success.length > 0){ %>
+                <div class="alert alert-success fadeOut" role="alert">
+                    <%= success %>
+                </div>
+            <% } %>
+        </div>
+      </div>
 
-    <div id="landing-header">
- 		<h1>Welcome to YelpCamp!</h1>
-		<a href="/campgrounds" class="btn btn-lg btn-success">View All Campgrounds</a>
-    </div>
-
-    <ul class="slideshow">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
-<% include partials/footer %>
+    <script type="text/javascript" src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

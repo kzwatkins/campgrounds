@@ -1,0 +1,89 @@
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background: url("http://freeaussiestock.com/free/Northern_Territory/slides/camp_fire.jpg") 
+  no-repeat 50% 50%;
+  background-size: cover;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #F9F3F4;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+#hdr-h1{
+  -vendor-animation-duration: 1s;
+  -vendor-animation-delay: 0s;
+}
+
+#hdr-btn{
+  -vendor-animation-duration: 2s;
+  -vendor-animation-delay: 0.3s;
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
